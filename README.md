@@ -1,8 +1,8 @@
 
 # rubika-bot ⭐
 
-[![npm](https://img.shields.io/npm/v/rubika-bot.svg)](https://www.npmjs.com/package/rubika-bot)
-[![Downloads](https://img.shields.io/npm/dt/rubika-bot.svg)](https://www.npmjs.com/package/rubika-bot)
+[![npm](https://img.shields.io/npm/v/rubika-bot.svg)](https://www.npmjs.com/package/rubika-bot-x)
+[![Downloads](https://img.shields.io/npm/dt/rubika-bot.svg)](https://www.npmjs.com/package/rubika-bot-x)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 🚀 Build powerful bots for the Rubika messaging platform with ease!
