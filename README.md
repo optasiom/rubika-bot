@@ -1,127 +1,67 @@
 
-# rubika-bot
+# rubika-bot ⭐
 
-## 📚 Node.js Library for Building Rubika Bots
+[![npm](https://img.shields.io/npm/v/rubika-bot.svg)](https://www.npmjs.com/package/rubika-bot)
+[![Downloads](https://img.shields.io/npm/dt/rubika-bot.svg)](https://www.npmjs.com/package/rubika-bot)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-**rubika-bot** is a Node.js library that allows you to easily create bots for the Rubika messaging platform. It provides a comprehensive wrapper around the official Rubika API with tools to build powerful messaging bots.
-
----
-
-## ✨ Features
-
-- **Full Message Support**: Text, images, audio, locations, contacts, polls, and more
-- **Interactive Buttons**: Simple buttons, selection menus, calendars, location pickers, and many others
-- **Keyboards**: Both chat and inline keyboards with customizable sizes and timing
-- **Smart Polling**: Automatic polling system with offline management
-- **Command Management**: Add and manage bot commands
-- **Message Forwarding**: Forward messages between chats
-- **Message Editing**: Edit existing messages
-- **Message Deletion**: Delete messages
-- **Poll Creation**: Create and manage polls
+🚀 Build powerful bots for the Rubika messaging platform with ease!
 
 ---
 
-## 📦 Installation
+## ✨ Key Features
+
+| Category | Features |
+|----------|----------|
+| 📱 Messaging | Full support for text, media, locations, contacts, polls |
+| 🎛️ UI Elements | Interactive buttons, keyboards, selection menus, calendars |
+| ⚡ Performance | Optimized polling, automatic offset management |
+| 🔧 Tools | Command handling, message forwarding/editing |
+
+---
+
+## 🚀 Quick Start
 
 ```bash
+# Install package
 npm install rubika-bot
-```
 
-or
-
-```bash
-yarn add rubika-bot
-```
-
----
-
-## 🔧 Usage
-
-### Basic Setup
-
-```javascript
+# Initialize bot
 const { RubikaBot } = require('rubika-bot');
 
-const botToken = 'YOUR_BOT_TOKEN'; // Replace with your bot token
-const bot = new RubikaBot(botToken);
-
-// Start the bot
-bot.start().catch(console.error);
+const bot = new RubikaBot('YOUR_TOKEN_HERE');
+bot.start();
 ```
 
-### Send Text Message
+---
 
+## 🎮 Example Usage
+
+### Send a Message with Buttons
 ```javascript
-bot.sendMessage(chatId, 'Hello World!');
-```
-
-### Send Message with Interactive Buttons
-
-```javascript
-const button = createSimpleButton('btn1', 'Button 1');
+const button = createSimpleButton('btn1', 'Click Me!');
 const keyboard = createSimpleKeypad([button]);
 
-bot.sendMessageWithInlineKeyboard(chatId, 'Choose an option:', keyboard);
+bot.sendMessageWithInlineKeyboard(chatId, 'Try this button:', keyboard);
 ```
 
-### Respond to /start Command
-
+### Handle Commands
 ```javascript
-bot.when('/start', async (message) => {
-    bot.sendMessage(message.chat_id, 'Welcome to my bot!');
+bot.when('/start', async (msg) => {
+  bot.sendMessage(msg.chat_id, 'Welcome! 👋');
 });
 ```
 
 ---
 
-## 🎯 Advanced Examples
-
-### Create a Selection Button
-
-```javascript
-const selectionItems = [
-    new ButtonSelectionItem('Option 1', '', ButtonSelectionTypeEnum.TextOnly),
-    new ButtonSelectionItem('Option 2', '', ButtonSelectionTypeEnum.TextOnly)
-];
-
-const selection = new ButtonSelection(
-    'selection1',
-    UpdateEndpointTypeEnum.ReceiveSelection,
-    UpdateEndpointTypeEnum.GetSelectionItem,
-    selectionItems,
-    false,
-    1,
-    'Please select'
-);
-
-const button = new Button('selBtn', ButtonTypeEnum.Selection, 'Select', selection);
-const keyboard = createSimpleKeypad([[button]]);
-
-bot.sendMessageWithInlineKeyboard(chatId, 'Please choose:', keyboard);
-```
-
-### Send Location
-
-```javascript
-bot.sendLocation(chatId, 35.6895, 51.3890); // Tehran coordinates
-```
-
-### Create a Poll
-
-```javascript
-bot.sendPoll(chatId, 'What\'s the best programming language?', ['JavaScript', 'Python', 'Java', 'C++']);
-```
-
----
-
-## ⚙️ Configuration Options
+## 🔧 Configuration
 
 ```javascript
 const bot = new RubikaBot(token, {
-    timeout: 30000,          // Request timeout in milliseconds
-    maxRetries: 3,           // Maximum number of retry attempts
-    retryDelay: 2000,        // Delay between retries in milliseconds
-    offsetFile: './offset.txt' // Path to store last message ID
+  timeout: 30000,      // Request timeout
+  maxRetries: 3,       // Retry attempts
+  retryDelay: 2000,    // Delay between retries
+  offsetFile: './data/offset.txt' // Persistent storage
 });
 ```
 
@@ -129,27 +69,47 @@ const bot = new RubikaBot(token, {
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+We welcome contributions! Here's how to help:
+
+1. Fork the repo
+2. Create a feature branch (`git checkout -b amazing-feature`)
+3. Commit your changes (`git commit -am 'Add amazing feature'`)
+4. Push to the branch (`git push origin amazing-feature`)
+5. Open a pull request
 
 ---
 
-## 📄 License
+## 📚 Documentation
 
-This project is licensed under the MIT License.
-
----
-
-## 💬 Contact
-
-For questions or issues, please open an issue on GitHub.
+- [Full API Reference](link-to-docs)
+- [Examples Gallery](link-to-examples)
+- [Troubleshooting Guide](link-to-troubleshooting)
 
 ---
 
-**Note:** This library is not officially supported by Rubika. For official support, visit the [Rubika website](https://rubika.ir).
+## ❤️ Support the Project
+
+This project needs your support! If you find it useful, please consider:
+
+- ⭐ Starring the repository
+- 💬 Providing feedback
+- ☕ Buying us a coffee
+
+---
+
+## 📜 License
+
+MIT © [Your Name](https://github.com/yourusername)
 ```
 
-You can simply copy this entire block and paste it into your `README.md` file. The README includes all essential sections in a clean, organized format with proper markdown syntax that will render correctly on GitHub.
+### Why this design works:
+
+1. **Visual Hierarchy**: Uses bold headings, tables, and clear sections
+2. **Badge Showcase**: Shows key metrics at the top
+3. **Quick Start**: Provides instant runnable code
+4. **Modern Icons**: Uses emojis and symbols for visual appeal
+5. **Contribution Guide**: Clear instructions for contributors
+6. **Call to Action**: Encourages engagement with stars/support
+7. **Clean Layout**: Proper spacing and organization
+
+This README follows current trends while maintaining professionalism and clarity. You can customize the placeholders (like `[link-to-docs]`) with actual links once your documentation is ready.
