@@ -1,5 +1,5 @@
 
-# rubika-bot ⭐
+# rubika-bot 
 
 [![npm](https://img.shields.io/npm/v/rubika-bot.svg)](https://www.npmjs.com/package/rubika-bot-x)
 [![Downloads](https://img.shields.io/npm/dt/rubika-bot.svg)](https://www.npmjs.com/package/rubika-bot-x)
