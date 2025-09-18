@@ -27,7 +27,7 @@
 npm install rubika-bot-x
 
 # Initialize bot
-const { RubikaBot } = require('rubika-bot');
+const { RubikaBot } = require('rubika-bot-x');
 
 const bot = new RubikaBot('YOUR_TOKEN_HERE');
 bot.start();
