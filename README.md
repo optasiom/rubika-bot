@@ -99,7 +99,7 @@ This project needs your support! If you find it useful, please consider:
 
 ## 📜 License
 
-MIT © [Your Name](https://github.com/yourusername)
+MIT © [optasiom](https://github.com/optasiom)
 ```
 
 ### Why this design works:
