@@ -24,7 +24,7 @@
 
 ```bash
 # Install package
-npm install rubika-bot
+npm install rubika-bot-x
 
 # Initialize bot
 const { RubikaBot } = require('rubika-bot');
